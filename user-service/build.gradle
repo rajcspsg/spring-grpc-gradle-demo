@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+group 'com.example'
+version '0.0.1-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation project(':proto')
+    implementation 'net.devh:grpc-spring-boot-starter:2.13.1.RELEASE'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa:2.6.6'
+    implementation 'jakarta.xml.bind:jakarta.xml.bind-api:2.3.3'
+    implementation 'org.projectlombok:lombok:1.18.20'
+    runtimeOnly 'com.h2database:h2:1.4.200'
+    annotationProcessor 'org.projectlombok:lombok:1.18.20'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+test {
+    useJUnitPlatform()
+}

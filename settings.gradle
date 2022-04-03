@@ -1,0 +1,6 @@
+rootProject.name = 'spring-grpc-gradle-demo'
+include 'proto'
+include 'user-service'
+include 'movie-service'
+include 'aggregator-service'
+
